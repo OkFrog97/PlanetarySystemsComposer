@@ -19,9 +19,26 @@ namespace PlanetarySystemsComposer
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Star Sun = new Star();
-
-            MessageBox.Show(Sun.GetName());
+            MessageBox.Show("HelloWorld");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            Star Sun = new Star();
+            Graphics Graphic = e.Graphics;
+            Graphic.DrawImage(Sun.SunImg, Sun.x, Sun.y, Sun.Size, Sun.Size);
+            Invalidate();
+        }
+
     }
 }
