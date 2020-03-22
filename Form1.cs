@@ -31,7 +31,7 @@ namespace PlanetarySystemsComposer
             Star Sun = new Star();
             using (Graphics g = panel1.CreateGraphics())
             {
-                g.DrawImage(Sun.SunImg, Sun.x, Sun.y, Sun.Size, Sun.Size);
+                g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
             }
 
         }

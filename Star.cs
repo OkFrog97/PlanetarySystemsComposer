@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace PlanetarySystemsComposer
 {
-    class Star:CelestialObject
+    class Star : CelestialObject
     {
         public Star()
         {
@@ -16,11 +16,11 @@ namespace PlanetarySystemsComposer
             Img = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\sun.png");
             ImgSize = 100;
             Name = "Sun";
-            Mass =  1.9885; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
+            Mass = 1.9885; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
             SunDistance = 0;
 
         }
-        
+
         public Star(String name, double mass)
         {
             X = 50;
@@ -31,39 +31,5 @@ namespace PlanetarySystemsComposer
             Mass = mass; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
             SunDistance = 0;
         }
-        
-        
-        
-        
-        
-        
-
-
-        /*
-        String Name;
-        public int x;
-        public int y;
-        public Image SunImg;
-        public int Size;
-        
-
-        public Star ()
-        {
-            
-            Name = "Sun";
-            SunImg = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\sun.png");
-            x = 50;
-            y = 50;
-            Size = 100;
-            
-        }
-
-        public Star (String name)
-        {
-            
-            Name = name;
-            
-        }
-        */
     }
 }
