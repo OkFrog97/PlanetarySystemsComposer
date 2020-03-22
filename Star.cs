@@ -21,9 +21,15 @@ namespace PlanetarySystemsComposer
 
         }
         
-        public Star(String name, int mass)
+        public Star(String name, double mass)
         {
-
+            X = 50;
+            Y = 50;
+            Img = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\sun.png");
+            ImgSize = 100;
+            Name = name;
+            Mass = mass; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
+            SunDistance = 0;
         }
         
         
