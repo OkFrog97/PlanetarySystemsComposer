@@ -33,6 +33,7 @@ namespace PlanetarySystemsComposer
             {
                 g.DrawImage(Sun.SunImg, Sun.x, Sun.y, Sun.Size, Sun.Size);
             }
+
         }
 
 
