@@ -10,14 +10,14 @@ namespace PlanetarySystemsComposer
     abstract class CelestialObject
     {
         //basic haracteristics
-        int X { get; set; } //X-Axis
-        int Y { get; set; } //Y-Axis
-        Image Img { get; set; }
-        int ImgSize { get; set; }
+        public int X { get; set; } //X-Axis
+        public int Y { get; set; } //Y-Axis
+        public Image Img { get; set; }
+        public int ImgSize { get; set; }
 
         //Celestial Objects haracteristics
         public String Name { get; set; }
-        public int Mass { get; set; }
+        public double Mass { get; set; }
         public int SunDistance { get; set; }
     }
 }
