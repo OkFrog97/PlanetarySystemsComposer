@@ -16,10 +16,8 @@ namespace PlanetarySystemsComposer
         int ImgSize { get; set; }
 
         //Celestial Objects haracteristics
-        String Name { get; set; }
-        int Mass { get; set; }
-        int SunDistance { get; set; }
-
-
+        public String Name { get; set; }
+        public int Mass { get; set; }
+        public int SunDistance { get; set; }
     }
 }
