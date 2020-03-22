@@ -22,7 +22,7 @@ namespace PlanetarySystemsComposer
             SunImg = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\sun.png");
             x = 50;
             y = 50;
-            Size = 70;
+            Size = 100;
         }
 
         public Star (String name)
@@ -34,7 +34,6 @@ namespace PlanetarySystemsComposer
         {
             return Name;
         }
-
 
     }
 }
