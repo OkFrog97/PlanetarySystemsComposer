@@ -8,5 +8,6 @@ namespace PlanetarySystemsComposer
 {
     class Planet:CelestialObject
     {
+
     }
 }
