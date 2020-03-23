@@ -34,6 +34,15 @@ namespace PlanetarySystemsComposer
                 g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
             }
 
+            //test
+            Planet Earth = new Planet ();
+            using (Graphics g = panel1.CreateGraphics())
+            {
+                g.DrawImage(Earth.Img, Earth.X, Earth.Y, Earth.ImgSize, Earth.ImgSize);
+            }
+
+
+
         }
 
 
