@@ -54,7 +54,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(741, 475);
             this.panel1.TabIndex = 2;
-            this.panel1.UseWaitCursor = true;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // tableLayoutPanel2
@@ -75,7 +74,6 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(261, 700);
             this.tableLayoutPanel2.TabIndex = 4;
-            this.tableLayoutPanel2.UseWaitCursor = true;
             // 
             // button1
             // 
@@ -87,7 +85,6 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "New Star System";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.UseWaitCursor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // button2
@@ -100,7 +97,6 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Add planet";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.UseWaitCursor = true;
             // 
             // button3
             // 
@@ -112,7 +108,6 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Clear System";
             this.button3.UseVisualStyleBackColor = true;
-            this.button3.UseWaitCursor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
@@ -125,7 +120,6 @@
             this.button4.TabIndex = 3;
             this.button4.Text = "Exit";
             this.button4.UseVisualStyleBackColor = true;
-            this.button4.UseWaitCursor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // panel2
@@ -135,7 +129,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(467, 216);
             this.panel2.TabIndex = 5;
-            this.panel2.UseWaitCursor = true;
             // 
             // richTextBox1
             // 
@@ -147,7 +140,6 @@
             this.richTextBox1.Size = new System.Drawing.Size(461, 210);
             this.richTextBox1.TabIndex = 0;
             this.richTextBox1.Text = "";
-            this.richTextBox1.UseWaitCursor = true;
             // 
             // tableLayoutPanel1
             // 
@@ -164,7 +156,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(271, 216);
             this.tableLayoutPanel1.TabIndex = 6;
-            this.tableLayoutPanel1.UseWaitCursor = true;
             // 
             // button5
             // 
@@ -176,7 +167,6 @@
             this.button5.TabIndex = 0;
             this.button5.Text = "Habitable zone";
             this.button5.UseVisualStyleBackColor = true;
-            this.button5.UseWaitCursor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
@@ -189,7 +179,6 @@
             this.button6.TabIndex = 1;
             this.button6.Text = "Star Distance";
             this.button6.UseVisualStyleBackColor = true;
-            this.button6.UseWaitCursor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
@@ -202,7 +191,6 @@
             this.button7.TabIndex = 2;
             this.button7.Text = "Gravity";
             this.button7.UseVisualStyleBackColor = true;
-            this.button7.UseWaitCursor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Form1
@@ -214,6 +202,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel1);
+            this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ForeColor = System.Drawing.Color.CornflowerBlue;
@@ -222,7 +211,6 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
