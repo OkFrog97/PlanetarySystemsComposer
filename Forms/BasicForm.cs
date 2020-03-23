@@ -78,7 +78,8 @@ namespace PlanetarySystemsComposer
 
         private void button1_Click_1(object sender, EventArgs e)
         {
-
+            Forms.StarSettingForm S = new Forms.StarSettingForm();
+            S.Show();
         }
 
         private void button5_Click(object sender, EventArgs e)
