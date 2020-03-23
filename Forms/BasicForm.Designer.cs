@@ -52,7 +52,7 @@
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Location = new System.Drawing.Point(272, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(868, 475);
+            this.panel1.Size = new System.Drawing.Size(867, 475);
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
@@ -101,6 +101,8 @@
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(261, 180);
@@ -111,6 +113,8 @@
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(3, 189);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(261, 177);
@@ -120,6 +124,8 @@
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(3, 375);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(261, 180);
@@ -130,6 +136,8 @@
             // 
             // button4
             // 
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(3, 561);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(261, 183);
@@ -140,6 +148,8 @@
             // 
             // button5
             // 
+            this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(3, 3);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(394, 80);
@@ -150,6 +160,8 @@
             // 
             // button6
             // 
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Location = new System.Drawing.Point(3, 89);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(395, 83);
@@ -160,6 +172,8 @@
             // 
             // button7
             // 
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Location = new System.Drawing.Point(3, 178);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(394, 82);
@@ -170,6 +184,9 @@
             // 
             // richTextBox1
             // 
+            this.richTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.richTextBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.richTextBox1.Location = new System.Drawing.Point(3, 3);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(461, 256);
@@ -178,16 +195,20 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.AutoSize = true;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
             this.ClientSize = new System.Drawing.Size(1138, 749);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.tableLayoutPanel2);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
+            this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ForeColor = System.Drawing.Color.CornflowerBlue;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
+            this.RightToLeftLayout = true;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.tableLayoutPanel2.ResumeLayout(false);
