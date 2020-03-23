@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\PlanetSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PlanetSettingForm.Designer.cs">
+      <DependentUpon>PlanetSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StarSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StarSettingForm.Designer.cs">
+      <DependentUpon>StarSettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObjClasses\CelestialObject.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="Forms\BasicForm.cs">
@@ -65,6 +77,12 @@
     </Compile>
     <EmbeddedResource Include="Forms\BasicForm.resx">
       <DependentUpon>BasicForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PlanetSettingForm.resx">
+      <DependentUpon>PlanetSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StarSettingForm.resx">
+      <DependentUpon>StarSettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
