@@ -67,7 +67,7 @@ namespace PlanetarySystemsComposer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(DataBank.StarName); 
+            MessageBox.Show(DataBank.StarStellarClass); 
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -89,6 +89,7 @@ namespace PlanetarySystemsComposer
                     }
             }
             */
+            MessageBox.Show(DataBank.StarStellarClass);
             Star Sun = new Star();
             using (Graphics g = panel1.CreateGraphics()) //два раза один код? Фу. Переписать после теста
             {

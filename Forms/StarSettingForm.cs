@@ -39,7 +39,14 @@ namespace PlanetarySystemsComposer.Forms
             f.SomeVal = this.richTextBox1.Text;
             */
             DataBank.StarName = this.richTextBox1.Text;
-            DataBank.StarMass = double.Parse(this.richTextBox2.Text); //валидация
+
+            try
+            {
+                DataBank.StarMass = double.Parse(this.richTextBox2.Text); //валидация
+            }
+            catch (System.FormatException) {
+                
+            }
             DataBank.StarStellarClass = selectedElementListBox1;
             DataBank.isCreateStar = true;
             Close();
@@ -68,6 +75,11 @@ namespace PlanetarySystemsComposer.Forms
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedElementListBox1 = listBox1.SelectedItem.ToString();
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

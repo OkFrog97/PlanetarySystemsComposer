@@ -176,6 +176,7 @@
             this.richTextBox2.Size = new System.Drawing.Size(504, 39);
             this.richTextBox2.TabIndex = 5;
             this.richTextBox2.Text = "";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
             // 
             // listBox1
             // 
