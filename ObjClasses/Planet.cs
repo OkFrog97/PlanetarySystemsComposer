@@ -12,8 +12,8 @@ namespace PlanetarySystemsComposer
     {
         public Planet()
         {
-            X = 120;
-            Y = 120;
+            X = 170;
+            Y = 170;
             Img = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\planet-generic01-000.export.png"); //выбор рисунка
             ImgSize = 30;
             Name = "Earth";

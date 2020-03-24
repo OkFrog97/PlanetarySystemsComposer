@@ -51,11 +51,11 @@ namespace PlanetarySystemsComposer
         }
 
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        public void panel1_Paint(object sender, PaintEventArgs e)
         {
         }
 
-        private void panel1_Paint_1(object sender, PaintEventArgs e)
+        public void panel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
@@ -67,7 +67,7 @@ namespace PlanetarySystemsComposer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(DataBank.StarName); //почему не передается?
+            MessageBox.Show(DataBank.StarName); 
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -79,8 +79,23 @@ namespace PlanetarySystemsComposer
         {
             Forms.StarSettingForm S = new Forms.StarSettingForm();
             S.Show();
-           
-           
+            /*
+            if (DataBank.isCreateStar)
+            {
+                Star Sun = new Star();
+                using (Graphics g = panel1.CreateGraphics()) //два раза один код? Фу. Переписать после теста
+                    {
+                        g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
+                    }
+            }
+            */
+            Star Sun = new Star();
+            using (Graphics g = panel1.CreateGraphics()) //два раза один код? Фу. Переписать после теста
+            {
+                g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
+            }
+
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -100,7 +115,12 @@ namespace PlanetarySystemsComposer
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-
+            //test
+            Planet Earth = new Planet();
+            using (Graphics g = panel1.CreateGraphics())
+            {
+                g.DrawImage(Earth.Img, Earth.X, Earth.Y, Earth.ImgSize, Earth.ImgSize);
+            }
         }
 
        public void richTextBox1_TextChanged(object sender, EventArgs e)

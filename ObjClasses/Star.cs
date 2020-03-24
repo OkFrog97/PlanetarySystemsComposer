@@ -11,8 +11,19 @@ namespace PlanetarySystemsComposer
     {
 
         public String StellarClass { get; set; }
-        public String StarColor { get; set; }
 
+        String StarColor { get; set; }
+
+        readonly Dictionary<string, string> Colors = new Dictionary<string, string>
+        {
+            ["O"]="blue",
+            ["B"]="white-blue",
+            ["A"] ="white",
+            ["F"] ="white",
+            ["F"] ="yellow",
+            ["G"] ="yellow-orange",
+            ["K"] ="orange-red"
+        };
         
         public Star()
         {
@@ -24,11 +35,11 @@ namespace PlanetarySystemsComposer
             Mass = 1.9885; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
             SunDistance = 0;
             StellarClass = "G";
-            StarColor = "white";
+            StarColor = GetColor(StellarClass);
 
         }
 
-        public Star(String name, double mass, String stellarClass, String starColor)
+        public Star(String name, double mass, String stellarClass)
         {
             X = 50;
             Y = 50;
@@ -38,7 +49,13 @@ namespace PlanetarySystemsComposer
             Mass = mass; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
             SunDistance = 0;
             StellarClass = stellarClass;
-            StarColor = starColor;
+            StarColor = GetColor(StellarClass);
+        }
+
+        string GetColor (string stellarClass)
+        {
+            //в будущем нужно будет добавить проверки/верификации
+            return Colors[stellarClass];
         }
     }
 }

@@ -185,10 +185,19 @@
             this.listBox1.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 23;
+            this.listBox1.Items.AddRange(new object[] {
+            "M",
+            "K",
+            "J",
+            "F",
+            "A",
+            "B",
+            "O"});
             this.listBox1.Location = new System.Drawing.Point(3, 233);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(504, 48);
             this.listBox1.TabIndex = 6;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // listBox2
             // 

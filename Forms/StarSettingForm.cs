@@ -11,8 +11,11 @@ using System.Windows.Forms;
 namespace PlanetarySystemsComposer.Forms
 
 {
+  
     public partial class StarSettingForm : Form
     {
+        string selectedElementListBox1; //Спектральынй класс предполагает определенный цвет, характеристика цвета звещды лишняя
+
         public StarSettingForm()
         {
             
@@ -36,10 +39,9 @@ namespace PlanetarySystemsComposer.Forms
             f.SomeVal = this.richTextBox1.Text;
             */
             DataBank.StarName = this.richTextBox1.Text;
-
-
-
-
+            DataBank.StarMass = double.Parse(this.richTextBox2.Text); //валидация
+            DataBank.StarStellarClass = selectedElementListBox1;
+            DataBank.isCreateStar = true;
             Close();
         }
 
@@ -61,6 +63,11 @@ namespace PlanetarySystemsComposer.Forms
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            selectedElementListBox1 = listBox1.SelectedItem.ToString();
         }
     }
 }
