@@ -89,7 +89,7 @@ namespace PlanetarySystemsComposer
                     }
             }
             */
-            MessageBox.Show(DataBank.StarStellarClass);
+           
             Star Sun = new Star();
             using (Graphics g = panel1.CreateGraphics()) //два раза один код? Фу. Переписать после теста
             {
@@ -117,6 +117,9 @@ namespace PlanetarySystemsComposer
         private void button2_Click_1(object sender, EventArgs e)
         {
             //test
+            Forms.PlanetSettingForm s2 = new Forms.PlanetSettingForm();
+            s2.Show();
+
             Planet Earth = new Planet();
             using (Graphics g = panel1.CreateGraphics())
             {
