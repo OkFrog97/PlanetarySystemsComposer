@@ -8,6 +8,11 @@ namespace PlanetarySystemsComposer
 {
     static class DataBank
     {
+        //star settings
         public static string StarName { get; set; }
+        public static double StarMass { get; set; }
+        public static string StarStellarClass { get; set; }
+        public static string StarColor { get; set; }
+
     }
 }

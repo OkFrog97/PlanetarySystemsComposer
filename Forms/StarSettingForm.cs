@@ -36,7 +36,11 @@ namespace PlanetarySystemsComposer.Forms
             f.SomeVal = this.richTextBox1.Text;
             */
             DataBank.StarName = this.richTextBox1.Text;
-            MessageBox.Show(DataBank.StarName);
+
+
+
+
+            Close();
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
