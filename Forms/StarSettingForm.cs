@@ -40,6 +40,7 @@ namespace PlanetarySystemsComposer.Forms
             */
             DataBank.StarName = this.richTextBox1.Text;
 
+            //вопрос: можно ли все это сделать более логичным, без катч?
             try
             {
                 DataBank.StarMass = double.Parse(this.richTextBox2.Text); //валидация

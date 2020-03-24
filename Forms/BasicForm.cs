@@ -106,7 +106,7 @@ namespace PlanetarySystemsComposer
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            richTextBox1.Text = "Hello world!";
         }
 
         private void button7_Click(object sender, EventArgs e)
