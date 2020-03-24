@@ -12,6 +12,9 @@ namespace PlanetarySystemsComposer
 {
     public partial class Form1 : Form
     {
+
+        public String SomeVal;
+        
         public Form1()
         {
             InitializeComponent();
@@ -64,7 +67,7 @@ namespace PlanetarySystemsComposer
 
         private void button3_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show(SomeVal); //почему не передается?
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -94,6 +97,11 @@ namespace PlanetarySystemsComposer
         }
 
         private void button2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+       public void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }

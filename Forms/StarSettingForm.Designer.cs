@@ -33,9 +33,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -124,14 +124,14 @@
             this.label1.Text = "Star name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // label2
+            // label4
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 110);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(123, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Star mass";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(3, 290);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(128, 30);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Star Color";
             // 
             // label3
             // 
@@ -143,14 +143,14 @@
             this.label3.Text = "Stellar Class";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // label4
+            // label2
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 290);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(128, 30);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Star Color";
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(123, 30);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Star mass";
             // 
             // richTextBox1
             // 

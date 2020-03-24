@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PlanetarySystemsComposer.Forms
+
 {
     public partial class StarSettingForm : Form
     {
         public StarSettingForm()
         {
+            
             InitializeComponent();
         }
 
@@ -29,7 +31,9 @@ namespace PlanetarySystemsComposer.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Form1 f = new Form1();
+            f.SomeVal = this.richTextBox1.Text;
+            MessageBox.Show(f.SomeVal);
         }
 
         private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
