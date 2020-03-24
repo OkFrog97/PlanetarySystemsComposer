@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataBank.cs" />
     <Compile Include="Forms\PlanetSettingForm.cs">
       <SubType>Form</SubType>
     </Compile>

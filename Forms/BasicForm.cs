@@ -13,7 +13,7 @@ namespace PlanetarySystemsComposer
     public partial class Form1 : Form
     {
 
-        public String SomeVal;
+        public String SomeVal { get; set; }
         
         public Form1()
         {
@@ -67,7 +67,7 @@ namespace PlanetarySystemsComposer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(SomeVal); //почему не передается?
+            MessageBox.Show(DataBank.StarName); //почему не передается?
         }
 
         private void button4_Click(object sender, EventArgs e)
