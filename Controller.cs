@@ -6,15 +6,18 @@ using System.Threading.Tasks;
 
 namespace PlanetarySystemsComposer
 {
-    class Controller
+    static class Controller
     {
-        public CelestialObject CreateStar()
+        public static Star Star;
+        
+        public static void CreateStar()
         {
-            Star Star = new Star();
-            return Star;
+            Star = new Star();
+            //Form1 frm = new Form1();
+            //frm.DrawSun();
         }
 
-        public CelestialObject CreateStar(string name, double mass, string StellarClass)
+        public static CelestialObject CreateStar(string name, double mass, string StellarClass)
         {
             Star Star = new Star(name, mass, StellarClass);
             return Star;

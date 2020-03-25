@@ -67,7 +67,7 @@ namespace PlanetarySystemsComposer
 
         private void button6_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = Sun.Name;
+            richTextBox1.Text = Controller.Star.Name;
         }
 
         private void button7_Click(object sender, EventArgs e)

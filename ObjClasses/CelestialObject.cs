@@ -7,7 +7,7 @@ using System.Drawing;
 
 namespace PlanetarySystemsComposer
 {
-    abstract class CelestialObject
+    abstract class CelestialObject //abstact be here
     {
         //basic haracteristics
         public int X { get; set; } //X-Axis

@@ -18,7 +18,6 @@ namespace PlanetarySystemsComposer.Forms
 
         public StarSettingForm()
         {
-            
             InitializeComponent();
         }
 
@@ -34,7 +33,6 @@ namespace PlanetarySystemsComposer.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-          
             DataBank.StarName = this.richTextBox1.Text;
             //вопрос: можно ли все это сделать более логичным, без катч?
             try
@@ -45,11 +43,7 @@ namespace PlanetarySystemsComposer.Forms
                 DataBank.StarMass = 555.0;
             }
             DataBank.StarStellarClass = selectedElementListBox1;
-            DataBank.isCreateStar = true;
-
-            Form1 f = new Form1();
-            f.DrawSun();
-
+            Controller.CreateStar();
             Close();
         }
 
