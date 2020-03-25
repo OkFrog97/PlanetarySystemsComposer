@@ -13,9 +13,6 @@ namespace PlanetarySystemsComposer
     public partial class Form1 : Form
     {
 
-        static CelestialObject Sun;
-
-
         public String SomeVal { get; set; }
         
         public Form1()
@@ -67,7 +64,7 @@ namespace PlanetarySystemsComposer
 
             string info = $"Star name: {Controller.Star.Name};\n" +
                 $"Star color: {Controller.Star.StarColor};\n"+
-                $"Planets: {0};\n";
+                $"Planets: {Controller.Planets.Count};\n";
             
             richTextBox1.Text = info;
 
@@ -85,10 +82,9 @@ namespace PlanetarySystemsComposer
 
         private void button2_Click_1(object sender, EventArgs e)
         {
-            //test
             Forms.PlanetSettingForm s2 = new Forms.PlanetSettingForm();
             s2.ShowDialog();
-            
+            DrawPlanet();    
         }
 
         public void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -96,8 +92,9 @@ namespace PlanetarySystemsComposer
 
         }
 
+
         public void DrawSun()
-        { 
+        {
             if (Controller.Star != null) //is star object exist
             {
                 using (Graphics g = panel1.CreateGraphics())
@@ -105,7 +102,30 @@ namespace PlanetarySystemsComposer
                     g.DrawImage(Controller.Star.Img, Controller.Star.X, Controller.Star.Y, Controller.Star.ImgSize, Controller.Star.ImgSize);
                 }
             }
-            
+        }
+
+
+        public void DrawPlanet()
+        {
+            if (Controller.Planets.Count() != 0)
+            {
+                using (Graphics g = panel1.CreateGraphics())
+                {
+                    Planet p = Controller.Planets[Controller.Planets.Count()-1];
+                    
+                    int kx = (Controller.Planets.Count()-1)*p.X;
+                    int ky = (Controller.Planets.Count() - 1) * p.Y;
+                    int j = 1;
+                    if (Controller.Planets.Count() > 1)
+                    {
+                        j = (Controller.Planets.Count());
+                    }
+
+
+
+                    g.DrawImage(p.Img, p.X+kx, p.Y+ky, p.ImgSize*j, p.ImgSize*j);
+                }
+            }
         }
 
     }

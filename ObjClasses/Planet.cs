@@ -10,11 +10,22 @@ namespace PlanetarySystemsComposer
 {
     class Planet:CelestialObject
     {
+
+        readonly Dictionary<int, string> imgs = new Dictionary<int, string>
+        {
+            [1] = "D:\\Fp\\PlanetarySystemsComposer\\PlanetarySystemsComposer\\img\\planets\\p1.png",
+            [2] = "D:\\Fp\\PlanetarySystemsComposer\\PlanetarySystemsComposer\\img\\planets\\p2.png",
+            [3] = "D:\\Fp\\PlanetarySystemsComposer\\PlanetarySystemsComposer\\img\\planets\\p3.png",
+            [4] = "D:\\Fp\\PlanetarySystemsComposer\\PlanetarySystemsComposer\\img\\planets\\p4.png",
+            [5] = "D:\\Fp\\PlanetarySystemsComposer\\PlanetarySystemsComposer\\img\\planets\\p5.png",
+            [6] = "D:\\Fp\\PlanetarySystemsComposer\\PlanetarySystemsComposer\\img\\planets\\p6.png",
+        };
+
         public Planet()
         {
-            X = 170;
-            Y = 170;
-            Img = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\planet-generic01-000.export.png"); //выбор рисунка
+            X = 105;
+            Y = 100;
+            Img = new Bitmap(getPlanetImage()); //выбор рисунка
             ImgSize = 30;
             Name = "Earth";
             Mass = 5.9724; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
@@ -24,13 +35,19 @@ namespace PlanetarySystemsComposer
 
         public Planet(String name, double mass, int sunDistance)
         {
-            X = 50;
-            Y = 50;
-            Img = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\planet-generic01-000.export.png");
-            ImgSize = 100;
+            X = 105;
+            Y = 100;
+            Img = new Bitmap(getPlanetImage());
+            ImgSize = 30;
             Name = name;
             Mass = mass; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
             SunDistance = sunDistance;
+        }
+
+        string getPlanetImage()
+        {
+            Random rnd = new Random();
+            return imgs[rnd.Next(1,7)];
         }
     }
 }

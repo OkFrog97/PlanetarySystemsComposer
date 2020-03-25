@@ -27,8 +27,8 @@ namespace PlanetarySystemsComposer
         
         public Star()
         {
-            X = 50;
-            Y = 50;
+            X = 20;
+            Y = 20;
             Img = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\sun.png");
             ImgSize = 100;
             Name = "Sun";

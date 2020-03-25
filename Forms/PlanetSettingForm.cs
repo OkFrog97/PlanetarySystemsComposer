@@ -63,7 +63,8 @@ namespace PlanetarySystemsComposer.Forms
             {
                 DataBank.PlanetStarDistance = 147000000;
             }
-
+            Controller.CreatePlanet(DataBank.PlanetName, DataBank.PlanetMass, DataBank.PlanetStarDistance);
+            Close();
 
         }
 
