@@ -36,5 +36,40 @@ namespace PlanetarySystemsComposer.Forms
         {
             Close();
         }
+
+        private void richTextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            DataBank.PlanetName = richTextBox1.Text;
+
+            try
+            {
+                DataBank.PlanetMass = double.Parse(richTextBox2.Text);
+            }
+            catch
+            {
+                DataBank.PlanetMass = 0.0;
+            }
+
+            try
+            {
+                DataBank.PlanetStarDistance = int.Parse(richTextBox3.Text);
+            }
+            catch
+            {
+                DataBank.PlanetStarDistance = 147000000;
+            }
+
+
+        }
+
+        private void richTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

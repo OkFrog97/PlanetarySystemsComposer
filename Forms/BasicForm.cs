@@ -88,7 +88,7 @@ namespace PlanetarySystemsComposer
             //test
             Forms.PlanetSettingForm s2 = new Forms.PlanetSettingForm();
             s2.ShowDialog();
-            //drawplanet
+            
         }
 
         public void richTextBox1_TextChanged(object sender, EventArgs e)

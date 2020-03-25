@@ -12,7 +12,11 @@ namespace PlanetarySystemsComposer
         public static string StarName { get; set; }
         public static double StarMass { get; set; }
         public static string StarStellarClass { get; set; }
-        public static bool isCreateStar = false; //костыль, переделать без флагов
+
+        //planet setting
+        public static string PlanetName { get; set; }
+        public static double PlanetMass { get; set; }
+        public static int PlanetStarDistance { get; set; } //if Distance == 0 or somthing? Bug.
 
     }
 }

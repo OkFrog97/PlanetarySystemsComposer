@@ -9,6 +9,7 @@ namespace PlanetarySystemsComposer
     static class Controller
     {
         public static Star Star;
+        public static Planet[] Planets = new Planet[6];
         
         public static void CreateStar(string name, double mass, string StellarClass)
         {

@@ -34,10 +34,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.richTextBox2 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
             this.tableLayoutPanel2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +109,7 @@
             this.richTextBox1.Size = new System.Drawing.Size(504, 43);
             this.richTextBox1.TabIndex = 4;
             this.richTextBox1.Text = "";
+            this.richTextBox1.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // richTextBox2
             // 
@@ -121,6 +122,17 @@
             this.richTextBox2.Size = new System.Drawing.Size(504, 39);
             this.richTextBox2.TabIndex = 5;
             this.richTextBox2.Text = "";
+            this.richTextBox2.TextChanged += new System.EventHandler(this.richTextBox2_TextChanged);
+            // 
+            // richTextBox3
+            // 
+            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.richTextBox3.Location = new System.Drawing.Point(3, 233);
+            this.richTextBox3.Name = "richTextBox3";
+            this.richTextBox3.Size = new System.Drawing.Size(506, 40);
+            this.richTextBox3.TabIndex = 6;
+            this.richTextBox3.Text = "";
+            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -148,6 +160,7 @@
             this.button1.TabIndex = 0;
             this.button1.Text = "Create Planet!";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -160,16 +173,6 @@
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // richTextBox3
-            // 
-            this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
-            this.richTextBox3.Location = new System.Drawing.Point(3, 233);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(506, 40);
-            this.richTextBox3.TabIndex = 6;
-            this.richTextBox3.Text = "";
-            this.richTextBox3.TextChanged += new System.EventHandler(this.richTextBox3_TextChanged);
             // 
             // PlanetSettingForm
             // 

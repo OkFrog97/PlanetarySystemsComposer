@@ -40,7 +40,7 @@ namespace PlanetarySystemsComposer.Forms
                 DataBank.StarMass = double.Parse(this.richTextBox2.Text); //валидация
             }
             catch (System.FormatException) {
-                DataBank.StarMass = 555.0;
+                DataBank.StarMass = 0.0;
             }
             DataBank.StarStellarClass = selectedElementListBox1;
             Controller.CreateStar(DataBank.StarName, DataBank.StarMass, DataBank.StarStellarClass);
