@@ -13,36 +13,15 @@ namespace PlanetarySystemsComposer
     public partial class Form1 : Form
     {
 
+        static CelestialObject Sun;
+
+
         public String SomeVal { get; set; }
         
         public Form1()
         {
             InitializeComponent();
         }
-
-
-        /*
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //Эта кнопка должна отрисовывать солнышко
-            //код анона
-            Star Sun = new Star();
-            using (Graphics g = panel1.CreateGraphics())
-            {
-                g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
-            }
-
-            //test
-            Planet Earth = new Planet ();
-            using (Graphics g = panel1.CreateGraphics())
-            {
-                g.DrawImage(Earth.Img, Earth.X, Earth.Y, Earth.ImgSize, Earth.ImgSize);
-            }
-
-
-
-        }
-        */
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -67,7 +46,7 @@ namespace PlanetarySystemsComposer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(DataBank.StarStellarClass); 
+            MessageBox.Show(Sun.Name); 
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -75,28 +54,10 @@ namespace PlanetarySystemsComposer
             Close();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        public void button1_Click_1(object sender, EventArgs e)
         {
             Forms.StarSettingForm S = new Forms.StarSettingForm();
             S.Show();
-            /*
-            if (DataBank.isCreateStar)
-            {
-                Star Sun = new Star();
-                using (Graphics g = panel1.CreateGraphics()) //два раза один код? Фу. Переписать после теста
-                    {
-                        g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
-                    }
-            }
-            */
-           
-            Star Sun = new Star();
-            using (Graphics g = panel1.CreateGraphics()) //два раза один код? Фу. Переписать после теста
-            {
-                g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
-            }
-
-
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -106,7 +67,7 @@ namespace PlanetarySystemsComposer
 
         private void button6_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = "Hello world!";
+            richTextBox1.Text = Sun.Name;
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -131,5 +92,15 @@ namespace PlanetarySystemsComposer
         {
 
         }
+
+      public void DrawSun()
+        {
+           
+            using (Graphics g = panel1.CreateGraphics()) //два раза один код? Фу. Переписать после теста
+            {
+                g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
+            }
+        }
+
     }
 }

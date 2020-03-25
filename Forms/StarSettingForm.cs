@@ -34,22 +34,22 @@ namespace PlanetarySystemsComposer.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-           /*
-            Form1 f = new Form1();
-            f.SomeVal = this.richTextBox1.Text;
-            */
+          
             DataBank.StarName = this.richTextBox1.Text;
-
             //вопрос: можно ли все это сделать более логичным, без катч?
             try
             {
                 DataBank.StarMass = double.Parse(this.richTextBox2.Text); //валидация
             }
             catch (System.FormatException) {
-                
+                DataBank.StarMass = 555.0;
             }
             DataBank.StarStellarClass = selectedElementListBox1;
             DataBank.isCreateStar = true;
+
+            Form1 f = new Form1();
+            f.DrawSun();
+
             Close();
         }
 
