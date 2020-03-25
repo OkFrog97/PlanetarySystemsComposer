@@ -22,13 +22,7 @@ namespace PlanetarySystemsComposer
             }
         }
 
-        /*
-        public static CelestialObject CreateStar(string name, double mass, string StellarClass)
-        {
-            Star Star = new Star(name, mass, StellarClass);
-            return Star;
-        }
-        */
+        
 
     }
 }

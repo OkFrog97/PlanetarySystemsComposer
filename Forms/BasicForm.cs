@@ -64,7 +64,12 @@ namespace PlanetarySystemsComposer
 
         private void button5_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = Controller.Star.Name;
+
+            string info = $"Star name: {Controller.Star.Name};\n" +
+                $"Star color: {Controller.Star.StarColor};\n"+
+                $"Planets: {0};\n";
+            
+            richTextBox1.Text = info;
 
         }
 

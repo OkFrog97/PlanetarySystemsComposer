@@ -12,7 +12,7 @@ namespace PlanetarySystemsComposer
 
         public String StellarClass { get; set; }
 
-        String StarColor { get; set; }
+        public String StarColor { get; set; }
 
         readonly Dictionary<string, string> Colors = new Dictionary<string, string>
         {
