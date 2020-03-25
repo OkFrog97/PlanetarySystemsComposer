@@ -21,8 +21,7 @@ namespace PlanetarySystemsComposer
                 Star = new Star(name, mass, StellarClass);
             }
 
-            //Form1 frm = new Form1();
-            //frm.DrawSun();
+            
         }
 
         /*

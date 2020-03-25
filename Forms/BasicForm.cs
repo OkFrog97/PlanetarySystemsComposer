@@ -58,6 +58,7 @@ namespace PlanetarySystemsComposer
         {
             Forms.StarSettingForm S = new Forms.StarSettingForm();
             S.Show();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -80,7 +81,6 @@ namespace PlanetarySystemsComposer
             //test
             Forms.PlanetSettingForm s2 = new Forms.PlanetSettingForm();
             s2.Show();
-
             Planet Earth = new Planet();
             using (Graphics g = panel1.CreateGraphics())
             {
@@ -88,17 +88,20 @@ namespace PlanetarySystemsComposer
             }
         }
 
-       public void richTextBox1_TextChanged(object sender, EventArgs e)
+        public void richTextBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-      public void DrawSun()
+        public void DrawSun()
         {
-           
-            using (Graphics g = panel1.CreateGraphics()) //два раза один код? Фу. Переписать после теста
+            //ссылка на объект не указывает на экземпляр объекта
+            if (Controller.Star != null)
             {
-                g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
+                using (Graphics g = panel1.CreateGraphics())
+                {
+                    g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
+                }
             }
         }
 
