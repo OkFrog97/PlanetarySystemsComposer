@@ -39,7 +39,7 @@ namespace PlanetarySystemsComposer
 
         }
 
-        public Star(String name, double mass, String stellarClass)
+        public Star(string name, double mass, string stellarClass)
         {
             X = 50;
             Y = 50;

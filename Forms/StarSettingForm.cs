@@ -43,7 +43,7 @@ namespace PlanetarySystemsComposer.Forms
                 DataBank.StarMass = 555.0;
             }
             DataBank.StarStellarClass = selectedElementListBox1;
-            Controller.CreateStar();
+            Controller.CreateStar(DataBank.StarName, DataBank.StarMass, DataBank.StarStellarClass);
             Close();
         }
 
