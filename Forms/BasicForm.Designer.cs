@@ -168,7 +168,7 @@
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(268, 65);
             this.button5.TabIndex = 0;
-            this.button5.Text = "Habitable zone";
+            this.button5.Text = "System info";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -180,7 +180,7 @@
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(268, 67);
             this.button6.TabIndex = 1;
-            this.button6.Text = "Star Distance";
+            this.button6.Text = "Habitable zone";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -192,7 +192,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(268, 66);
             this.button7.TabIndex = 2;
-            this.button7.Text = "Gravity";
+            this.button7.Text = "Star Distance";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 

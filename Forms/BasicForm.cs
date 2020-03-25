@@ -46,7 +46,7 @@ namespace PlanetarySystemsComposer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Sun.Name); 
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -57,18 +57,20 @@ namespace PlanetarySystemsComposer
         public void button1_Click_1(object sender, EventArgs e)
         {
             Forms.StarSettingForm S = new Forms.StarSettingForm();
-            S.Show();
+            S.ShowDialog(); //тормазит выполнение формы
+            DrawSun();
             
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
+            richTextBox1.Text = Controller.Star.Name;
 
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            richTextBox1.Text = Controller.Star.Name;
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -80,12 +82,8 @@ namespace PlanetarySystemsComposer
         {
             //test
             Forms.PlanetSettingForm s2 = new Forms.PlanetSettingForm();
-            s2.Show();
-            Planet Earth = new Planet();
-            using (Graphics g = panel1.CreateGraphics())
-            {
-                g.DrawImage(Earth.Img, Earth.X, Earth.Y, Earth.ImgSize, Earth.ImgSize);
-            }
+            s2.ShowDialog();
+            //drawplanet
         }
 
         public void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -94,15 +92,15 @@ namespace PlanetarySystemsComposer
         }
 
         public void DrawSun()
-        {
-            //ссылка на объект не указывает на экземпляр объекта
-            if (Controller.Star != null)
+        { 
+            if (Controller.Star != null) //is star object exist
             {
                 using (Graphics g = panel1.CreateGraphics())
                 {
-                    g.DrawImage(Sun.Img, Sun.X, Sun.Y, Sun.ImgSize, Sun.ImgSize);
+                    g.DrawImage(Controller.Star.Img, Controller.Star.X, Controller.Star.Y, Controller.Star.ImgSize, Controller.Star.ImgSize);
                 }
             }
+            
         }
 
     }

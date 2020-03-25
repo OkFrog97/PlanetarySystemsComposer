@@ -20,8 +20,6 @@ namespace PlanetarySystemsComposer
             {
                 Star = new Star(name, mass, StellarClass);
             }
-
-            
         }
 
         /*
