@@ -127,6 +127,7 @@
             // richTextBox3
             // 
             this.richTextBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(36)))), ((int)(((byte)(49)))));
+            this.richTextBox3.ForeColor = System.Drawing.Color.CornflowerBlue;
             this.richTextBox3.Location = new System.Drawing.Point(3, 233);
             this.richTextBox3.Name = "richTextBox3";
             this.richTextBox3.Size = new System.Drawing.Size(506, 40);
