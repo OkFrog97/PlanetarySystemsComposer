@@ -14,21 +14,37 @@ namespace PlanetarySystemsComposer
 
         public String StarColor { get; set; }
 
+        private double StarLumen { get; set; }
+
+
         readonly Dictionary<string, string> Colors = new Dictionary<string, string>
         {
             ["O"]="blue",
             ["B"]="white-blue",
             ["A"] ="white",
             ["F"] ="white",
-            ["F"] ="yellow",
-            ["G"] ="yellow-orange",
+            ["G"] ="yellow",
+            ["M"] ="yellow-orange",
             ["K"] ="orange-red"
         };
-        
+
+
+        readonly Dictionary<string, double> Lumen = new Dictionary<string, double>
+        {
+            ["O"] = 20000,
+            ["B"] = 80,
+            ["A"] = 1400000,
+            ["F"] = 6,
+            ["G"] = 1.2,
+            ["M"] = 0.04,
+            ["K"] = 0.4
+        };
+
+
         public Star()
         {
-            X = 20;
-            Y = 20;
+            X = 10;
+            Y = 15;
             Img = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\sun.png");
             ImgSize = 100;
             Name = "Sun";
@@ -36,13 +52,14 @@ namespace PlanetarySystemsComposer
             SunDistance = 0;
             StellarClass = "G";
             StarColor = GetColor(StellarClass);
+            StarLumen = GetLum(StellarClass);
 
         }
 
         public Star(string name, double mass, string stellarClass)
         {
-            X = 50;
-            Y = 50;
+            X = 10;
+            Y = 15;
             Img = new Bitmap("C:\\Users\\User\\Desktop\\projects\\imgs\\sun.png");
             ImgSize = 100;
             Name = name;
@@ -50,12 +67,23 @@ namespace PlanetarySystemsComposer
             SunDistance = 0;
             StellarClass = stellarClass;
             StarColor = GetColor(StellarClass);
+            StarLumen = GetLum(StellarClass);
         }
 
         string GetColor (string stellarClass)
         {
             //в будущем нужно будет добавить проверки/верификации
             return Colors[stellarClass];
+        }
+
+        double GetLum (string stellarClass)
+        {
+            return Lumen[stellarClass];
+        }
+
+        public double GetHabitableZone ()
+        {
+            return Convert.ToInt64(Math.Sqrt(StarLumen / 1.2)) * 140000000;
         }
     }
 }

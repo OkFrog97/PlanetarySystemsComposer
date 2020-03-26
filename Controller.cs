@@ -40,5 +40,11 @@ namespace PlanetarySystemsComposer
             Planets.Add(p);
         }
 
+        public static void DeliteSystem()
+        {
+            Star = null;
+            Planets = new List<Planet>();
+        }
+
     }
 }

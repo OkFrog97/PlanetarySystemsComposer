@@ -43,7 +43,7 @@ namespace PlanetarySystemsComposer
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            Controller.DeliteSystem();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -61,10 +61,20 @@ namespace PlanetarySystemsComposer
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (Controller.Star == null)
+            {
+                MessageBox.Show("Star isn't exist.");
+                return;
+            }
 
             string info = $"Star name: {Controller.Star.Name};\n" +
                 $"Star color: {Controller.Star.StarColor};\n"+
                 $"Planets: {Controller.Planets.Count};\n";
+
+            foreach (Planet pl in Controller.Planets)
+            {
+                info += pl.Name+"\n";
+            }
             
             richTextBox1.Text = info;
 
@@ -72,7 +82,34 @@ namespace PlanetarySystemsComposer
 
         private void button6_Click(object sender, EventArgs e)
         {
+            //обитаемая зона
+
+            string info = "";
             
+            
+            //проверка на существование - добавить везде;
+            if (Controller.Star == null || Controller.Planets.Count == 0)
+            {
+                MessageBox.Show("Star or Planets isn't exist.");
+                return;
+            }
+
+            //
+            foreach (Planet pl in Controller.Planets)
+            {
+                if (Controller.Star.GetHabitableZone() * 0.8 < pl.SunDistance &&
+                    Controller.Star.GetHabitableZone() * 1.1 > pl.SunDistance)
+                {
+                    info += pl.Name + ";\n";
+                }
+            }
+            
+            if (info == "")
+            {
+                info += "No one planet is not in Habitable zone";
+            }
+
+            richTextBox1.Text = info;
         }
 
         private void button7_Click(object sender, EventArgs e)

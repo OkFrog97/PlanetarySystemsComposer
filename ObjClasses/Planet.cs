@@ -29,7 +29,7 @@ namespace PlanetarySystemsComposer
             ImgSize = 30;
             Name = "Earth";
             Mass = 5.9724; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
-            SunDistance = 1;
+            SunDistance = 140000000;
 
         }
 
