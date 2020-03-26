@@ -8,7 +8,7 @@ using System.Drawing;
 
 namespace PlanetarySystemsComposer
 {
-    class Planet:CelestialObject
+    class Planet : CelestialObject, IComparable<Planet>
     {
 
         readonly Dictionary<int, string> imgs = new Dictionary<int, string>
@@ -43,6 +43,13 @@ namespace PlanetarySystemsComposer
             Mass = mass; //Вопрос: У массы планет и солнца разные множители. Как вычислять их G?
             SunDistance = sunDistance;
         }
+
+
+        public int CompareTo(Planet p)
+        {
+            return this.SunDistance.CompareTo(p.SunDistance);
+        }
+
 
         string getPlanetImage()
         {

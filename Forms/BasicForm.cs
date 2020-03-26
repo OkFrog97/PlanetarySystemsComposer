@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace PlanetarySystemsComposer
 {
@@ -114,6 +115,31 @@ namespace PlanetarySystemsComposer
 
         private void button7_Click(object sender, EventArgs e)
         {
+            //дистанция до солнца
+            if (Controller.Star == null || Controller.Planets.Count == 0)
+            {
+                MessageBox.Show("Star or Planets isn't exist.");
+                return;
+            }
+
+            string info = "";
+            List<Planet> localPlanets = new List<Planet>();
+
+            localPlanets = Controller.Planets.GetRange(0, Controller.Planets.Count);
+            localPlanets.Sort();
+
+            foreach (Planet pl in localPlanets)
+            {
+                info += $"{pl.Name} ({pl.SunDistance});\n";
+            }
+
+
+            if (info == "")
+            {
+                info += "System haven't planets;";
+            }
+
+            richTextBox1.Text = info;
 
         }
 
@@ -157,8 +183,6 @@ namespace PlanetarySystemsComposer
                     {
                         j = (Controller.Planets.Count());
                     }
-
-
 
                     g.DrawImage(p.Img, p.X+kx, p.Y+ky, p.ImgSize*j, p.ImgSize*j);
                 }
