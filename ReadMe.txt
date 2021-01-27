@@ -10,4 +10,3 @@ Discription: None.
 v. 0.1 - proto;
 
 -------------------------
-Created by Abdullaev Farkhad. 
